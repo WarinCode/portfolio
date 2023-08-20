@@ -1,0 +1,50 @@
+// @use './about';
+// @use './education';
+// @use './navbar';
+// @use './footer';
+// @use './pages';
+// @use './icon';
+
+// @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+// @font-face {
+//   font-family: Barlow;
+//   src: url("/src/assets/fonts/Barlow/Barlow-Regular.ttf");
+// }
+
+@font-face {
+  font-family: K2D;
+  src: url("/src/assets/fonts/K2D/K2D-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  font-family: K2D , "K2D" !important;
+  scroll-behavior: smooth;
+}
+
+
+$blackColor: #1d1d1d;
+$purpleColor: #5c3194;
+$greenColor: #0ccf0c;
+$whiteColor: #f8f7f7;
+
+body {
+  position: relative;
+  & ::selection{
+    color:$greenColor ;
+    background: $whiteColor;
+  }
+}
+
+.App{
+  display: flex;
+  gap: 30px;  
+  .home{
+    flex-direction: column;
+    flex: auto;
+  }
+}

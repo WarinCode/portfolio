@@ -1,0 +1,63 @@
+$redColor: #f11818e0;
+$grayColor: #5f5f5f;
+$bg: #f1f1f1;
+
+.notFound404-container {
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    cursor: default;
+    padding: 40px;
+    background: $bg;
+    border-radius: 25px 12px;
+    box-shadow: 10px 10px 15px #4b4a4aef;
+    div .icon-404 {
+        font-size: 105px;
+        color: $redColor;
+    }
+    .title {
+        font-size: 45px;
+        font-weight: bolder;
+        color: $redColor;
+        margin-bottom: 20px;
+    }
+    details {
+        color: rgb(27, 27, 27);
+        summary {
+            font-size: 28px;
+            margin: 10px 0;
+            &::marker {
+                content: "";
+            }
+            .icon-detail{
+                font-size: 27px;
+                transform: translateY(3px);
+            }
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+.btn-back{
+    font-size: 27px;
+    color:rgba(252, 246, 252, 0.897);
+    font-weight: bold;
+    margin: 30px auto 10px;
+    cursor: pointer;
+    background: $grayColor;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    border: none;
+    transition: linear .2s ;
+    text-transform: capitalize;
+    &:hover{
+        outline-offset: 3.4px;
+        outline: 1px $grayColor solid;
+        filter:contrast(3)
+    }
+}

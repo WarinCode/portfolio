@@ -1,0 +1,174 @@
+.Fc-icons {
+  margin-right: 5px;
+  font-size: 32px;
+  transform: translateY(0.3rem);
+}
+
+.social-icons .social-list {
+  display: flex;
+  flex-grow: 1;
+  list-style: none;
+  margin: 12px auto 3px;
+}
+.social-icons .social-list .social-items {
+  transition: all ease 0.4s;
+  margin: 0 6px;
+  font-size: 24px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.social-icons .social-list .social-items a:visited, .social-icons .social-list .social-items a:link {
+  transition: all ease 0.4s;
+  text-decoration: none;
+  color: #faf8f8;
+}
+.social-icons .social-list .social-items a:visited:hover, .social-icons .social-list .social-items a:link:hover {
+  color: #0ccf0c;
+}
+.social-icons .social-list .social-items:is(:nth-child(1), :nth-child(3)) {
+  font-size: 26px;
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: #0a0a0a;
+  border-radius: 7px;
+  transition: all ease 0.4s;
+  opacity: 0.88;
+  visibility: hidden;
+}
+.btn-top * {
+  color: #faf8f8;
+  font-size: 30px;
+}
+.btn-top:hover {
+  opacity: 1;
+}
+
+nav {
+  transition: 0.5s all ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 290px;
+  min-width: 260px;
+  min-height: 100vh;
+  color: #f1f1f1;
+  background: #2f3337;
+  user-select: none;
+}
+nav aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 42pt;
+}
+nav aside #HamburgerMenu, nav aside #HamburgerMenu-active {
+  display: inherit;
+  font-size: 30px;
+  align-self: end;
+  margin: -40px 15px 10px 0;
+  cursor: pointer;
+}
+nav aside #HamburgerMenu-active {
+  margin: -20px 0 5px 0;
+  align-self: center;
+}
+nav aside .nav-userProfile {
+  padding: 7px;
+}
+nav aside .nav-userProfile .user-img {
+  border: 5px solid rgba(234, 232, 232, 0.171);
+  border-radius: 50%;
+  object-fit: cover;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 10px;
+  clip-path: circle(50%);
+}
+nav aside .nav-userProfile .user-name {
+  transition: 0.32s all ease-in-out;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+nav aside .nav-userProfile .user-description {
+  margin-top: 8px;
+}
+nav aside .nav-list {
+  width: 100%;
+  margin-block: 20px;
+  list-style: none;
+  transition: 0.32s all ease-in-out;
+}
+nav aside .nav-list .nav-items {
+  width: 100%;
+  height: 50px;
+  transition: 0.32s all ease-in-out;
+  margin-block: 8px;
+  font-size: 23px;
+}
+nav aside .nav-list .nav-items .link:is(:visited, :link) {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-transform: capitalize;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+nav aside .nav-list .nav-items .link:is(:visited, :link):hover {
+  transition: 0.32s all ease-in-out;
+}
+
+.nav-expanded {
+  position: relative;
+  transition: 0.5s all ease-in-out;
+  width: 90px;
+  min-width: 90px;
+}
+.nav-expanded aside .social-icons {
+  display: none;
+}
+.nav-expanded aside .nav-userProfile {
+  margin-block: 20px 15px;
+}
+.nav-expanded aside .nav-userProfile .user-img {
+  border: 4.3px solid rgba(234, 232, 232, 0.2);
+  height: 60px;
+  width: 60px;
+}
+.nav-expanded aside .nav-userProfile .user-name {
+  display: none;
+}
+.nav-expanded aside .nav-userProfile .user-description {
+  display: none;
+}
+.nav-expanded aside .nav-list .nav-items .link .Fc-icons {
+  font-size: 39px;
+}
+.nav-expanded aside .nav-list .nav-items .link p {
+  display: none;
+}
+.nav-expanded footer .footer-container p {
+  opacity: 0;
+}
+
+.nav-list li:hover {
+  transition: 0.32s all ease-in-out;
+  background-color: #1f1e1e;
+  color: #0ccf0c;
+}
+
+.nav-list:hover .nav-items .link:hover {
+  color: #0ccf0c;
+}
+
+/*# sourceMappingURL=navbar.css.map */

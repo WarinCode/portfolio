@@ -1,0 +1,54 @@
+.Fc-icons {
+  margin-right: 5px;
+  font-size: 32px;
+  transform: translateY(0.3rem);
+}
+
+.social-icons .social-list {
+  display: flex;
+  flex-grow: 1;
+  list-style: none;
+  margin: 12px auto 3px;
+}
+.social-icons .social-list .social-items {
+  transition: all ease 0.4s;
+  margin: 0 6px;
+  font-size: 24px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.social-icons .social-list .social-items a:visited, .social-icons .social-list .social-items a:link {
+  transition: all ease 0.4s;
+  text-decoration: none;
+  color: #faf8f8;
+}
+.social-icons .social-list .social-items a:visited:hover, .social-icons .social-list .social-items a:link:hover {
+  color: #0ccf0c;
+}
+.social-icons .social-list .social-items:is(:nth-child(1), :nth-child(3)) {
+  font-size: 26px;
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: #0a0a0a;
+  border-radius: 7px;
+  transition: all ease 0.4s;
+  opacity: 0.88;
+  visibility: hidden;
+}
+.btn-top * {
+  color: #faf8f8;
+  font-size: 30px;
+}
+.btn-top:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=icon.css.map */

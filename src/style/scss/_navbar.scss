@@ -1,0 +1,148 @@
+@use "./icon";
+
+$bg: #2f3337;
+$fontColor: #f1f1f1;
+$purpleColor: #5c3194;
+$hoverList: #1f1e1e;
+$greenColor: #0ccf0c;
+$normal: 23px;
+$big: 35px;
+$widthNavbar: 290px;
+@mixin hoverElement($second: 0.32s) {
+  transition: $second all ease-in-out;
+}
+
+nav {
+  @include hoverElement(0.5s);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: $widthNavbar;
+  min-width: $widthNavbar - 30px;
+  // height: 700px; //max-content
+  min-height: 100vh;
+  color: $fontColor;
+  background: $bg;
+  user-select: none;
+  aside {
+    width: 100%;
+    display: flex;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 42pt;
+    #HamburgerMenu , #HamburgerMenu-active{
+      display: inherit;
+      font-size: 30px;
+      align-self: end;
+      margin: -40px 15px 10px 0;
+      cursor: pointer;
+    }
+    #HamburgerMenu-active{
+      margin: -20px 0 5px 0;
+      align-self: center;
+    }
+    .nav-userProfile {
+      padding: 7px;
+      .user-img {
+        border: 5px solid rgba(234, 232, 232, 0.171);
+        border-radius: 50%;
+        object-fit: cover;
+        height: 130px;
+        width: 130px;
+        margin-bottom: 10px;
+        clip-path: circle(50%);
+      }
+      .user-name {
+        @include hoverElement();
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+        .user-description {
+          margin-top: 8px;
+        }
+    }
+    .nav-list {
+      // transform: translateX(-8px);
+      width: 100%;
+      margin-block: 20px;
+      list-style: none;
+      @include hoverElement();
+      .nav-items {
+        width: 100%;
+        height: 50px;
+        @include hoverElement();
+        margin-block: 8px;
+        font-size: $normal;
+        .link:is(:visited, :link) {
+          display: flex;
+          justify-content: center;
+          align-items: baseline;
+          text-transform: capitalize;
+          color: $fontColor;
+          text-decoration: none;
+          &:hover {
+            @include hoverElement();
+          }
+        }
+      }
+    }
+  }
+}
+
+// * navbar เมื่อขยายออก
+.nav-expanded {
+  position: relative;
+  @include hoverElement(0.5s);
+  width: 90px;  
+  min-width: 90px;
+
+  aside {
+    .social-icons {
+      display: none;
+    }
+    .nav-userProfile {
+      margin-block: 20px 15px;
+      .user-img {
+        border: 4.3px solid rgba(234, 232, 232, 0.2);
+        height: 60px;
+        width: 60px;
+      }
+      .user-name {
+        // font-size: 0;
+        display: none;
+      }
+      .user-description {
+        // font-size: 0;
+        display: none;
+      }
+    }
+    .nav-list {
+      .nav-items {
+        .link {
+          .Fc-icons {
+            font-size: 39px;
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  footer .footer-container p {
+    opacity: 0;
+  }
+}
+
+.nav-list li:hover {
+  @include hoverElement();
+  background-color: $hoverList;
+  color: $greenColor;
+}
+
+.nav-list:hover .nav-items .link:hover {
+  color: $greenColor;
+}

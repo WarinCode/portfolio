@@ -1,0 +1,172 @@
+$blackBorder: #1a1a1ae0;
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  .user-about {
+    letter-spacing: 0.6pt;
+    font-size: 18px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 1rem;
+    h1 {
+      text-decoration: underline;
+      font-size: 41px;
+      margin-bottom: 23px;
+    }
+    p {
+      text-align: center;
+      margin: 13px 0 9px;
+      font-size: 17px;
+    }
+  }
+  .my-stack-container {
+    display: flex;
+    align-self: center;
+    position: relative;
+    flex-direction: column;
+    width: min-content;
+    margin-block: 3px 5rem;
+    gap: 52px;
+    .box-item {
+      padding: 23px;
+      background: #ecf9ff;
+      border: $blackBorder solid 4px;
+      transition: all 0.53s ease-in-out;
+      &:hover {
+        filter: drop-shadow(15px 21px 1px #242424);
+      }
+      // border-radius: 12px 24px;
+      .text-inline {
+        display: inline-flex;
+        h2 {
+          font-size: 28px;
+          font-weight: bolder;
+        }
+        .icon-LaptopCode {
+          font-size: 32px;
+          transform: translateY(3px);
+          margin: 0 7px 0;
+        }
+      }
+      .box-material {
+        padding: 10px;
+        p {
+          text-transform: capitalize;
+          font-weight: lighter;
+          font-size: 21px;
+          margin-bottom: 6px;
+          .icon-SlArrowRight {
+            color: #3c486b;
+          }
+        }
+        .b-underline {
+          height: 0.1px;
+          width: 90%;
+          background: #3c486b;
+        }
+      }
+      .languages-group {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        margin: 15px auto;
+        background: #fffdfd;
+        border-radius: 23px;
+        img {
+          cursor: pointer;
+          width: 120px;
+          height: 80px;
+          margin-inline: -3px;
+          transition: all 0.4s ease-out;
+          &:hover {
+            scale: 120%;
+            filter: drop-shadow(0 0 9px rgba(0, 0, 0, 0.32));
+          }
+        }
+      }
+    }
+  }
+}
+
+.Accordion-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  margin: 3rem 2rem;
+  .AccordionItem {
+    border: 0.1px solid #080202;
+    font-size: 22px;
+    cursor: default;
+    width: 70%;
+    height: fit-content;
+    &:nth-child(even) {
+      border-top: none;
+      border-bottom: none;
+    }
+    .AccordionItemHeading {
+      transition: all 0.12s ease;
+      cursor: pointer;
+      background: #fcfbfb;
+      padding: 15px;
+      &:hover {
+        background: #f0efef;
+      }
+      .AccordionItemButton {
+        div {
+          .icon-arrow {
+            font-size: 32px;
+            transform: translateY(7px);
+          }
+          p {
+            word-spacing: 0.1pt;
+            display: inline;
+            text-align: start;
+            user-select: none;
+            // -webkit-user-select: none;
+          }
+        }
+      }
+    }
+    .AccordionItemPanel {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 16px;
+      padding: 40px 25px;
+      user-select: none;
+    }
+  }
+}
+
+.chart-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  #myChart {
+    width: 420px;
+    height: 420px;
+  }
+  .chart-details {
+    align-self: flex-start;
+    h3 {
+      margin: 70px 0 20px;
+      font-size: 29px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    ul {
+      text-align: start;
+      list-style-type: square;
+      li {
+        font-size: 21px;
+        margin-block: 10px;
+      }
+    }
+  }
+}

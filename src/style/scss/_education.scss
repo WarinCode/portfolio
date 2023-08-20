@@ -1,0 +1,69 @@
+$purpleColor: #5c3194;
+$greenColor: #0ccf0c;
+
+.education-container{
+    .swiper-container{
+        display: grid;
+        place-items: center;
+        margin: 2rem 0;
+        .swiper{
+            // background-color: aqua;
+            width: 650px;
+            height: 450px;
+            margin: 1rem 0;
+            .swiper-slide{
+                text-align: center;
+                .swiper-card{
+                    height: 100%;
+                    background: rgb(34,193,195);
+                    background: linear-gradient(52deg, rgba(34,193,195,1) 0%, rgba(117,223,185,1) 30%, rgba(198,253,175,1) 90%);
+                    //background:linear-gradient(to right, #b8b8b8 ,  #e9e9e9 , #f7f7f7);
+                    border: 10px solid rgb(66, 66, 66);
+                    padding: 15px;
+                    cursor: default;
+                    .card-title{
+                        //text-shadow: rgba(26, 26, 26, 0.1) 5px 4px;
+                        font-size: 28px;
+                        font-weight: bolder;
+                    }
+                    .card-img{
+                        object-fit: contain;
+                        width: 170px;
+                        height: 170px;
+                        margin-block:1rem 18px;
+                    }
+                    .card-description {
+                        display: block;
+                        padding: 15px;
+                        p{
+                            margin: 6px 0;
+                            font-size: 17px;
+                        }
+                        a:is(:visited , :link){
+                            display: inline;
+                            color: rgb(32, 32, 32);
+                            text-decoration: none;
+                            font-size: 17px;
+                            .icon-map{
+                                align-content: baseline;
+                                transform: translateY(2px);
+                                font-size: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+        .swiper-pagination{
+            margin: 14px 0 19px;
+        }
+        .swiper-pagination-bullet{
+            width: 11px;
+            height: 11px;
+        }
+        .swiper-pagination-bullet-active{
+            // color: red;
+            background: $greenColor;
+        }
+    }
+}

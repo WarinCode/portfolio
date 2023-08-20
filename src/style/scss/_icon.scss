@@ -1,0 +1,60 @@
+$purpleColor: #5c3194;
+$whiteColor: #faf8f8;
+$greenColor: #0ccf0c;
+$blackColor: #0a0a0a;
+
+@mixin delay(){
+    transition: all ease .4s;
+}
+.Fc-icons{
+    margin-right: 5px;
+    font-size: 32px;
+    transform: translateY(.3rem);
+}
+
+.social-icons .social-list{
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    margin:12px auto 3px;
+    .social-items {      
+        a:visited , a:link{
+            @include delay();
+            text-decoration: none;
+            color: $whiteColor;
+            &:hover{
+                color: $greenColor;
+            }
+        }
+        @include delay();
+        margin: 0 6px;
+        font-size: 24px;
+        cursor: pointer;
+        overflow: hidden;
+        &:is(:nth-child(1) , :nth-child(3)) {
+            font-size: 26px;
+        }
+    }
+}
+
+.btn-top{
+    position: fixed;
+    bottom: 4%;
+    right: 3%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: $blackColor;
+    border-radius: 7px;
+    @include delay();
+    opacity: .88;
+    visibility: hidden;
+    * {
+        color: $whiteColor;
+        font-size: 30px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
